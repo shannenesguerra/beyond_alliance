@@ -1,0 +1,249 @@
+<!-- PAGENAME -->
+
+HTML
+
+<!DOCTYPE html>
+    <html lang=en>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="assets/home.css">
+            <title>Beyond Alliance | Pagename</title>
+        </head>
+        <body>
+            <header class="header" id="header">
+                <div class="nav_logo_content">
+                    <a class="nav_logo" href="#">
+                        <img src="assets/photos/logo.png" alt="Beyond Alliance" height="30">
+                    </a>
+                    <button class="hamburger-icon">
+                    <label for="dropdown">
+                        <i class="fa fa-bars"></i>
+                        <i class="fa fa-times"></i>
+                    </label>
+                    <input type="checkbox" id="dropdown"/>
+                    </button>
+                </div>
+                <ul class="nav_menu">
+                    <li><a class="nav-item" id="active" href="#">Home</a></li>
+                    <li><a class="nav-item" href="about.html">About</a></li>
+                    <li><a class="nav-item" href="#roster">Roster</a></li>
+                    <li><a class="nav-item" href="#services">Services</a></li>
+                    <li><a class="nav-item" href="#programs">Programs</a></li>
+                </ul>
+            </header>
+            <main class="main">
+                <section class="home" id="home">
+                    <div class="home_container">
+                        <div class="home_info">
+                            
+                        </div>
+                        <br><br>
+                    </div>
+                </section>
+
+                <div class="red_line"></div>
+                
+            </main>
+            <footer class="footer">
+                <div class="footer_bg">
+                    <div class="footer_container">
+                        <h1 class="footer_title">What is <strong>Beyond Alliance</strong>?</h1>
+                        <p class="footer_info">
+                            <br><br>
+                            We are the undisputed gaming and esports entertainment company in South East Asia.
+                            <br><br>
+                            Well-embedded in the content distribution and gaming world, we’ve built our success by developing a robust business model and making ourselves the beyond of all
+                            destination for new and established gaming talents.
+                            <br><br>
+                            We are an Asian Behemoth in the making with backing from established entities around the globe.
+                        </p>
+                    </div>
+                </div>
+            </footer>
+
+            <script src="assets/script.js"></script>
+        </body>
+    </html>
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CSS
+
+/* PAGENAME */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    /*COLORS*/
+    --color-one: #1E1E1E;
+    --color-two: #282828;
+    --color-three: #3D0000;
+    --color-four: #D9D9D9;
+    --bg-color: #0B0B0B;
+    --white: #FFFFFF;
+    --black: #000000;
+
+    /*SIZES*/
+    --fontsize-one: 12px;
+    --fontsize-two: 20px;
+    --fontsize-three: 30px;
+    --fontsize-four: 40px;
+
+    --fontweight-one: 100;
+    --fontweight-two: 500;
+    --fontweight-three: bold;
+
+    --spacesize-one: 2%;
+    --spacesize-two: 5%;
+    --spacesize-three: 10%;
+
+    --navbar-height: 70px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body{
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--black);
+}
+
+.hamburger-icon {
+    display: none;
+}
+
+/* NAVBAR */
+
+.header {
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacesize-one) var(--spacesize-three) var(--spacesize-one) var(--spacesize-three);
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hamburger-icon{
+    border:none;
+    background-color:transparent;
+}
+
+.hamburger-icon .fa-bars,
+.hamburger-icon .fa-times{
+    color: var(--white);
+    font-size: var(--fontsize-two);
+    cursor: pointer;
+}
+
+.hamburger-icon input[type="checkbox"] {
+    appearance: none;
+}
+
+.nav_menu {
+    font-weight: var(--fontweight-two);
+    font-size: var(--fontsize-one);
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav_menu a {
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+.nav_menu a:hover {
+    font-weight: var(--fontweight-two);
+    color: var(--color-three);
+    transition: 0.3s;
+}
+
+#active {
+    color: var(--color-three);
+    font-weight: var(--fontweight-two);
+}
+
+@media screen and (max-width: 600px) {
+    .header {
+        display: block;
+    }
+    .nav_menu {
+        height:0;
+        overflow:hidden;
+        flex-direction: column;
+        align-items: center;
+        transition:all 0.5s ease-in-out;
+    }
+    .nav_logo_content {
+        display: flex;
+        justify-content: space-between;
+    }
+    .hamburger-icon {
+        display: block;
+    }
+    .fa-times{
+        display:none;
+    }
+    .header:has(.hamburger-icon input[type="checkbox"]:checked) .nav_menu {
+        margin-top: 1rem;
+        height: 200px;
+    }
+    .header:has(.hamburger-icon input[type="checkbox"]:checked) .fa-bars {
+        display:none;
+    }
+    .header:has(.hamburger-icon input[type="checkbox"]:checked) .fa-times{
+        display:inline-block;
+    }
+}
+
+/* MAIN */
+
+.main {
+    margin-top: 8%;
+    /*margin-left: var(--spacesize-two);
+    margin-right: var(--spacesize-two);*/
+    color: var(--white);
+}
+
+
+
+/* FOOTER */
+
+.footer {
+    background-color: var(--color-three);
+    color: var(--white);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 550px;
+}
+
+.footer_container {
+    margin-left: var(--spacesize-two);
+    margin-right: var(--spacesize-two);
+}
+
+.footer_info {
+    width: 40%;
+}
+
+.footer_title {
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.footer_info {
+    font-size: var(--fontsize-one);
+}
